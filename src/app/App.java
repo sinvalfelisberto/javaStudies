@@ -9,13 +9,22 @@ import java.util.Scanner;
 // import entities.Student;
 // import utils.CurrencyConverter;
 // import utils.Printer;
-import entities.Account;
+// import entities.Account;
 
 public class App {
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
 		Scanner scanner = new Scanner(System.in);
-		Account account;
+
+		scanner.close();
+	}
+
+}
+
+/*
+ *  estudo sobre construtores, getters and setters
+ * 
+ * 		Account account;
 		System.out.print("Enter account holder: ");
 		String name = scanner.nextLine();
 
@@ -54,10 +63,7 @@ public class App {
 		System.out.println();
 		System.out.println("Updated data: \n" + account);
 
-		scanner.close();
-	}
-
-}
+ */
 
 /*
  * Estudo sobre generics

@@ -40,7 +40,7 @@ public class Account {
         if (getBalance() < draw) {
             return false;
         }
-        this.balance -= draw;
+        this.balance -= draw + 5.0;
         return true;
     }
 
