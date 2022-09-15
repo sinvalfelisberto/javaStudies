@@ -1,8 +1,6 @@
 package app;
 
 import java.util.Locale;
-import java.util.Scanner;
-
 
 // import javax.print.attribute.standard.Media;
 
@@ -11,13 +9,66 @@ import java.util.Scanner;
 public class App {
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Quantos valores vai ter cada vetor? ");
-		int quantidadeItens = scanner.nextInt();
+		
+		
 
-		scanner.close();
 		}
 	}
+
+	/*Box, Unbox e Wrapper
+	 * 
+	 * int x = 20;
+		Object obj = x;
+
+		System.out.println(obj);
+
+		int y = (int) obj;
+
+		System.out.println(y);
+
+		Wrapper Classes
+		Double, Integer, Float...
+		Eles aceitam valores nulos, além de se 
+		comportarem como objetos.
+		
+	 */
+
+	/*
+	 * Exercício pensionato
+	 * 
+	 *  Scanner scanner = new Scanner(System.in);
+		System.out.print("How many rooms will be rented? ");
+		int rents= scanner.nextInt();
+		Pensionato[] alugueis = new Pensionato[10];
+		
+		for (int i = 0; i < rents; i++) {
+			System.out.printf("Rent #%d", (i + 1));
+			System.out.println();
+			System.out.print("Name: ");
+			scanner.nextLine();
+			String name = scanner.nextLine();
+			System.out.print("Email: ");
+			String email = scanner.next();
+			System.out.print("Room: ");
+			int room = scanner.nextInt();
+			System.out.println();
+
+			alugueis[room] = new Pensionato(name, email, room);
+
+		}
+		System.out.println();
+		System.out.println("Busy rooms:");
+
+		for (Pensionato pensionato : alugueis) {
+			if (pensionato != null) {
+				System.out.println(pensionato);
+			}
+		}
+		System.out.println();
+
+		scanner.close();
+	 * 
+	 */
 
 	/*
 	 * 
