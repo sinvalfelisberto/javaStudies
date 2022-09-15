@@ -2,197 +2,203 @@ package app;
 
 import java.util.Locale;
 
-// import javax.print.attribute.standard.Media;
-
-// import entities.Course;
-
 public class App {
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
-		
-		
 
-		}
 	}
 
-	/*Box, Unbox e Wrapper
-	 * 
-	 * int x = 20;
-		Object obj = x;
-
-		System.out.println(obj);
-
-		int y = (int) obj;
-
-		System.out.println(y);
-
-		Wrapper Classes
-		Double, Integer, Float...
-		Eles aceitam valores nulos, além de se 
-		comportarem como objetos.
-		
-	 */
-
-	/*
-	 * Exercício pensionato
-	 * 
-	 *  Scanner scanner = new Scanner(System.in);
-		System.out.print("How many rooms will be rented? ");
-		int rents= scanner.nextInt();
-		Pensionato[] alugueis = new Pensionato[10];
-		
-		for (int i = 0; i < rents; i++) {
-			System.out.printf("Rent #%d", (i + 1));
-			System.out.println();
-			System.out.print("Name: ");
-			scanner.nextLine();
-			String name = scanner.nextLine();
-			System.out.print("Email: ");
-			String email = scanner.next();
-			System.out.print("Room: ");
-			int room = scanner.nextInt();
-			System.out.println();
-
-			alugueis[room] = new Pensionato(name, email, room);
-
+	public static String capitalize(String phrase) {
+		if(phrase == null || phrase.length() == 0) {
+			return phrase;
 		}
-		System.out.println();
-		System.out.println("Busy rooms:");
+		// if()Sinval felisberto felisberto flisberto lisberto feliz berto berto liz elis elisân ra rafa rafae faraela
+		return "Ainda falta implementar...";
 
-		for (Pensionato pensionato : alugueis) {
-			if (pensionato != null) {
-				System.out.println(pensionato);
-			}
-		}
-		System.out.println();
+	}
+}
 
-		scanner.close();
-	 * 
-	 */
+/*
+ * Box, Unbox e Wrapper
+ * 
+ * int x = 20;
+ * Object obj = x;
+ * 
+ * System.out.println(obj);
+ * 
+ * int y = (int) obj;
+ * 
+ * System.out.println(y);
+ * 
+ * Wrapper Classes
+ * Double, Integer, Float...
+ * Eles aceitam valores nulos, além de se
+ * comportarem como objetos.
+ * 
+ */
 
-	/*
-	 * 
-	 * Ex: 05 Array 
-	 * 
-	 * 		System.out.print("Quantos valores vai ter cada vetor? ");
-		int quantidadeItens = scanner.nextInt();
-		int[] a, b, c;
+/*
+ * Exercício pensionato
+ * 
+ * Scanner scanner = new Scanner(System.in);
+ * System.out.print("How many rooms will be rented? ");
+ * int rents= scanner.nextInt();
+ * Pensionato[] alugueis = new Pensionato[10];
+ * 
+ * for (int i = 0; i < rents; i++) {
+ * System.out.printf("Rent #%d", (i + 1));
+ * System.out.println();
+ * System.out.print("Name: ");
+ * scanner.nextLine();
+ * String name = scanner.nextLine();
+ * System.out.print("Email: ");
+ * String email = scanner.next();
+ * System.out.print("Room: ");
+ * int room = scanner.nextInt();
+ * System.out.println();
+ * 
+ * alugueis[room] = new Pensionato(name, email, room);
+ * 
+ * }
+ * System.out.println();
+ * System.out.println("Busy rooms:");
+ * 
+ * for (Pensionato pensionato : alugueis) {
+ * if (pensionato != null) {
+ * System.out.println(pensionato);
+ * }
+ * }
+ * System.out.println();
+ * 
+ * scanner.close();
+ * 
+ */
 
-		System.out.println("Digite os valores do vetor A:");
-		a = new int[quantidadeItens];
-		for(int i = 0; i < a.length; i++) {
-			a[i] = scanner.nextInt();
-		}
+/*
+ * 
+ * Ex: 05 Array
+ * 
+ * System.out.print("Quantos valores vai ter cada vetor? ");
+ * int quantidadeItens = scanner.nextInt();
+ * int[] a, b, c;
+ * 
+ * System.out.println("Digite os valores do vetor A:");
+ * a = new int[quantidadeItens];
+ * for(int i = 0; i < a.length; i++) {
+ * a[i] = scanner.nextInt();
+ * }
+ * 
+ * System.out.println("Digite os valores do vetor B:");
+ * b = new int[quantidadeItens];
+ * for(int i = 0; i < b.length; i++) {
+ * b[i] = scanner.nextInt();
+ * }
+ * 
+ * c = new int[quantidadeItens];
+ * for(int i = 0; i < c.length; i++) {
+ * c[i] = a[i] + b[i];
+ * }
+ * System.out.println("VALOR RESULTANTE:");
+ * for(int i = 0; i < c.length; i++) {
+ * System.out.println(c[i]);
+ * }
+ * 
+ */
 
-		System.out.println("Digite os valores do vetor B:");
-		b = new int[quantidadeItens];
-		for(int i = 0; i < b.length; i++) {
-			b[i] = scanner.nextInt();
-		}
+/*
+ * Ex: 04 Array
+ * 
+ * 
+ * 
+ * System.out.print("Quantos numeros vc vai digitar? ");
+ * int quantidadeNumeros = scanner.nextInt();
+ * 
+ * int[] numeros = new int[quantidadeNumeros];
+ * for(int i = 0; i < numeros.length; i++) {
+ * System.out.printf("%do numero: ", (i + 1));
+ * numeros[i] = scanner.nextInt();
+ * }
+ * int quantidadePares = 0;
+ * System.out.println("NUMEROS PARES: ");
+ * for(int numero: numeros){
+ * if(numero % 2 == 0) {
+ * quantidadePares++;
+ * System.out.print(numero + "    ");
+ * }
+ * }
+ * System.out.println();
+ * System.out.println("Quantidade DE PARES = " + quantidadePares);
+ * 
+ */
 
-		c = new int[quantidadeItens];
-		for(int i = 0; i < c.length; i++) {
-			c[i] = a[i] + b[i];
-		}
-		System.out.println("VALOR RESULTANTE:");
-		for(int i = 0; i < c.length; i++) {
-			System.out.println(c[i]);
-		}
+/*
+ * Ex: 03 Array
+ * 
+ * Atleta atleta;
+ * System.out.print("Quantos atletas serão digitados? ");
+ * int quantidadeAtletas = scanner.nextInt();
+ * Atleta[] arrayAtletas = new Atleta[quantidadeAtletas];
+ * for(int i = 0; i < arrayAtletas.length; i++) {
+ * System.out.printf("Dados da %da pessoa:\n", (i + 1));
+ * System.out.print("Nome: ");
+ * String nome = scanner.next();
+ * System.out.print("Idade: ");
+ * int idade = scanner.nextInt();
+ * System.out.print("Altura: ");
+ * double altura = scanner.nextDouble();
+ * arrayAtletas[i] = new Atleta(nome, idade, altura);
+ * }
+ * double somaAlturas = 0.0;
+ * for(Atleta atl: arrayAtletas) {
+ * somaAlturas += atl.getAltura();
+ * }
+ * double mediaAlturas = somaAlturas / arrayAtletas.length;
+ * 
+ * System.out.println();
+ * System.out.printf("Altura média: %.2f%n", mediaAlturas);
+ * 
+ * int menorDezesseis = 0;
+ * for(Atleta a: arrayAtletas) {
+ * if(a.getIdade() < 16) {
+ * menorDezesseis++;
+ * }
+ * }
+ * double percentualDezesseis = ((double) menorDezesseis / (double)
+ * arrayAtletas.length) * 100.0;
+ * System.out.println("Pessoas com menos de 16 anos: " + String.format("%.1f",
+ * percentualDezesseis) + "%");
+ * 
+ * for(Atleta a: arrayAtletas) {
+ * if(a.getIdade() < 16) {
+ * System.out.println(a.getNome());
+ * }
+ * }
+ * 
+ */
 
-	 */
-
-	/*
-	 * Ex: 04 Array
-	 * 
-	 * 
-	 * 
-		System.out.print("Quantos numeros vc vai digitar? ");
-		int quantidadeNumeros = scanner.nextInt();
-
-		int[] numeros = new int[quantidadeNumeros];
-		for(int i = 0; i < numeros.length; i++) {
-			System.out.printf("%do numero: ", (i + 1));
-			numeros[i] = scanner.nextInt();
-		}
-		int quantidadePares = 0;
-		System.out.println("NUMEROS PARES: ");
-		for(int numero: numeros){
-			if(numero % 2 == 0) {
-				quantidadePares++;
-				System.out.print(numero + "    ");
-			}
-		}
-		System.out.println();
-		System.out.println("Quantidade DE PARES = " + quantidadePares);
-
-	 */
-
-	/*
-	 * Ex: 03 Array
-	 * 
-	  	Atleta atleta;
-		System.out.print("Quantos atletas serão digitados? ");
-		int quantidadeAtletas = scanner.nextInt();
-		Atleta[] arrayAtletas = new Atleta[quantidadeAtletas];
-		for(int i = 0; i < arrayAtletas.length; i++) {
-			System.out.printf("Dados da %da pessoa:\n", (i + 1));
-			System.out.print("Nome: ");
-			String nome = scanner.next();
-			System.out.print("Idade: ");
-			int idade = scanner.nextInt();
-			System.out.print("Altura: ");
-			double altura = scanner.nextDouble();
-			arrayAtletas[i] = new Atleta(nome, idade, altura);
-		}
-		double somaAlturas = 0.0;
-		for(Atleta atl: arrayAtletas) {
-			somaAlturas += atl.getAltura();
-		}
-		double mediaAlturas = somaAlturas / arrayAtletas.length;
-
-		System.out.println();
-		System.out.printf("Altura média: %.2f%n", mediaAlturas);
-
-		int menorDezesseis = 0;
-		for(Atleta a: arrayAtletas) {
-			if(a.getIdade() < 16) {
-				menorDezesseis++;
-			}
-		}
-		double percentualDezesseis =  ((double) menorDezesseis / (double) arrayAtletas.length) * 100.0;
-		System.out.println("Pessoas com menos de 16 anos: " + String.format("%.1f", percentualDezesseis) + "%");
-
-		for(Atleta a: arrayAtletas) {
-			if(a.getIdade() < 16) {
-				System.out.println(a.getNome());
-			}
-		}
-	 * 
-	 */
-
-	/*
-	 * Ex: 02 Array
-	 * 
-	  	System.out.print("Quantos numeros você vai digitar? ");
-		int quantidade = scanner.nextInt();
-		double[] valores = new double[quantidade];
-
-		for (int i = 0; i < valores.length; i++) {
-			System.out.print("Digite um numero: ");
-			valores[i] = scanner.nextDouble();
-		}
-
-		String valoresImpressao = "VALORES = ";
-		double soma = 0.0;
-		for(double i: valores) {
-			valoresImpressao += (i + " ");
-			soma += i;
-		}
-		double media = soma / valores.length;
-		System.out.println(valoresImpressao);
-		System.out.println("SOMA = " + String.format("%.2f", soma));
-		System.out.println("MEDIA = " + String.format("%.2f", media));
-	 */
+/*
+ * Ex: 02 Array
+ * 
+ * System.out.print("Quantos numeros você vai digitar? ");
+ * int quantidade = scanner.nextInt();
+ * double[] valores = new double[quantidade];
+ * 
+ * for (int i = 0; i < valores.length; i++) {
+ * System.out.print("Digite um numero: ");
+ * valores[i] = scanner.nextDouble();
+ * }
+ * 
+ * String valoresImpressao = "VALORES = ";
+ * double soma = 0.0;
+ * for(double i: valores) {
+ * valoresImpressao += (i + " ");
+ * soma += i;
+ * }
+ * double media = soma / valores.length;
+ * System.out.println(valoresImpressao);
+ * System.out.println("SOMA = " + String.format("%.2f", soma));
+ * System.out.println("MEDIA = " + String.format("%.2f", media));
+ */
 
 /*
  * Ex: 01 - Array
