@@ -5,6 +5,7 @@ import java.util.Locale;
 public class App {
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
+		System.out.println(capitalize("teste"));
 
 	}
 
@@ -12,9 +13,7 @@ public class App {
 		if(phrase == null || phrase.length() == 0) {
 			return phrase;
 		}
-		// if()Sinval felisberto felisberto flisberto lisberto feliz berto berto liz elis elisân ra rafa rafae faraela
-		return "Ainda falta implementar... ma";
-
+		return phrase.substring(0,1).toUpperCase() + phrase.substring(1);
 	}
 }
 
