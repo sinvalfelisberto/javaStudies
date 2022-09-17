@@ -2,18 +2,15 @@ package app;
 
 import java.util.Locale;
 
+import utils.Capitalize;
+
 public class App {
+
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
-		System.out.println(capitalize("teste"));
+		Capitalize cap = new Capitalize("telinha");
+		System.out.println(cap.capitalize());
 
-	}
-
-	public static String capitalize(String phrase) {
-		if(phrase == null || phrase.length() == 0) {
-			return phrase;
-		}
-		return phrase.substring(0,1).toUpperCase() + phrase.substring(1);
 	}
 }
 
