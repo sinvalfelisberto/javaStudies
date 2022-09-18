@@ -8,8 +8,7 @@ public class App {
 
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
-		Capitalize cap = new Capitalize("telinha");
-		System.out.println(cap.capitalize());
+		System.out.println(Capitalize.capitalize("phrase"));
 
 	}
 }
