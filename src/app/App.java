@@ -1,18 +1,27 @@
 package app;
 
+import java.rmi.server.RemoteServer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import utils.Capitalize;
 
 public class App {
 
 	public static void main(String[] args) throws Exception {
-		Locale.setDefault(Locale.US);
-		System.out.println(Capitalize.capitalize("phrase"));
 
 	}
 }
 
+/*
+ * Estudo sobre listas
+ */
+
+// Implementação do método Capitalize
+// System.out.println(Capitalize.capitalize("phrase"));
 /*
  * Box, Unbox e Wrapper
  * 
