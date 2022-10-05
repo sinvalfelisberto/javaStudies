@@ -1,21 +1,49 @@
 package app;
 
-import java.rmi.server.RemoteServer;
-import java.util.ArrayList;
-import java.util.List;
+// import java.rmi.server.RemoteServer;
+// import java.util.ArrayList;
+// import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.stream.Collectors;
+// import java.util.stream.Collectors;
 
-import entities.Employee;
-import entities.EmployeeManagement;
-import utils.Capitalize;
+// import entities.Employee;
+// import entities.EmployeeManagement;
+// import utils.Capitalize;
 
 public class App {
 
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
 		Scanner scanner = new Scanner(System.in);
+
+		int n = scanner.nextInt();
+		int[][] matriz = new int[n][n];
+
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < n; j++){
+				matriz[i][j] = scanner.nextInt();
+			}
+		}
+		System.out.println("Main Diagonal:");
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < n; j++){
+				if(i == j)
+				System.out.print(matriz[i][j] + " ");
+			}
+		}
+		System.out.println();
+		System.out.print("Quantity of negative numbers = ");
+		int count = 0;
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < n; j++){
+				if(matriz[i][j] < 0)
+				count++;
+			}
+		}
+		System.out.print(count);
+
+
 
 		scanner.close();
 		
