@@ -7,17 +7,67 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+import entities.Employee;
+import entities.EmployeeManagement;
 import utils.Capitalize;
 
 public class App {
 
 	public static void main(String[] args) throws Exception {
+		Locale.setDefault(Locale.US);
+		Scanner scanner = new Scanner(System.in);
 
+		scanner.close();
+		
 	}
+	
 }
+
+
 
 /*
  * Estudo sobre listas
+ * 
+ * 		List<EmployeeManagement> empregados = new ArrayList<>();
+
+		System.out.print("How many employees will be registered? ");
+		int quantity = scanner.nextInt();
+		System.out.println();
+
+		int i = 0;
+		while(i < quantity) {
+			System.out.printf("Employee #%d \n", i + 1);
+			System.out.print("Id: ");
+			String id = scanner.next();
+			System.out.print("Name: ");
+			scanner.nextLine();
+			String name = scanner.nextLine();
+			System.out.print("Salary: ");
+			double salary = scanner.nextDouble();
+
+			empregados.add(new EmployeeManagement(id, name, salary));
+			System.out.println();
+			i++;
+		}
+
+		System.out.print("Enter the employee ID to increase salary: ");
+		String idEmployee = scanner.next();
+		EmployeeManagement employeeFound = empregados.stream().filter(x -> x.getId().equals(idEmployee)).findFirst().orElse(null);
+		if(employeeFound == null){
+			System.out.println("This id does not exist!");
+		}
+		else{
+			empregados.remove(employeeFound);
+			System.out.print("Enter the percentage: ");
+			double percentage = scanner.nextDouble();
+			employeeFound.increaseSalary(percentage);
+			// double increasedSalary = employeeFound.increaseSalary(percentage);
+			// employeeFound.setSalary(increasedSalary);
+			empregados.add(employeeFound);
+		}
+		
+		System.out.println("List of employess:");
+		empregados.stream().forEach(e -> System.out.println(e));
  */
 
 // Implementação do método Capitalize
