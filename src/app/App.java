@@ -1,48 +1,13 @@
 package app;
 
-// import java.rmi.server.RemoteServer;
-// import java.util.ArrayList;
-// import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-// import java.util.stream.Collectors;
-
-// import entities.Employee;
-// import entities.EmployeeManagement;
-// import utils.Capitalize;
-
 public class App {
 
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
 		Scanner scanner = new Scanner(System.in);
-
-		int n = scanner.nextInt();
-		int[][] matriz = new int[n][n];
-
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < n; j++){
-				matriz[i][j] = scanner.nextInt();
-			}
-		}
-		System.out.println("Main Diagonal:");
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < n; j++){
-				if(i == j)
-				System.out.print(matriz[i][j] + " ");
-			}
-		}
-		System.out.println();
-		System.out.print("Quantity of negative numbers = ");
-		int count = 0;
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < n; j++){
-				if(matriz[i][j] < 0)
-				count++;
-			}
-		}
-		System.out.print(count);
-
+		
 
 
 		scanner.close();
@@ -50,7 +15,72 @@ public class App {
 	}
 	
 }
+/* Exercício com Matrizes
+ * 
+ * 		int n = scanner.nextInt();
+		int m = scanner.nextInt();
+		int[][] matriz = new int[n][m];
 
+		for(int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz[i].length; j++){
+				matriz[i][j] = scanner.nextInt();
+			}
+		}
+
+		int valorASerPesquisado = scanner.nextInt();
+
+		for(int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz[i].length; j++){
+				if(matriz[i][j] == valorASerPesquisado){
+					System.out.println("Position " + i + "," + j);
+					if(j > 0){
+						System.out.println("Left: " + matriz[i][j-1]);
+					}
+					if(j < matriz[i].length - 1){
+						System.out.println("Right: " + matriz[i][j + 1]);
+					}
+					if(i > 0){
+						System.out.println("Up: " + matriz[i-1][j]);
+					}
+					if(i < matriz.length - 1) {
+						System.out.println("Down: " + matriz[i + 1][j] + "\n");
+					}
+				}
+				
+			}
+		}
+ */
+
+
+/* Estudo com Matrizes - 
+
+ * int[][] matriz = new int[n][n];
+
+		for(int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz[i].length; j++){
+				matriz[i][j] = scanner.nextInt();
+			}
+		}
+		System.out.println("Main Diagonal:");
+		for(int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz[i].length; j++){
+				if(i == j)
+				System.out.print(matriz[i][j] + " ");
+			}
+		}
+		System.out.println();
+		System.out.print("Quantity of negative numbers = ");
+		int count = 0;
+		for(int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz[i].length; j++){
+				if(matriz[i][j] < 0)
+				count++;
+			}
+		}
+		System.out.print(count);
+
+
+ */
 
 
 /*
