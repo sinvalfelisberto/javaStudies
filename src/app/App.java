@@ -1,131 +1,130 @@
 package app;
 
-import java.util.Locale;
-import java.util.Scanner;
+import utils.Datas;
+
 public class App {
 
 	public static void main(String[] args) throws Exception {
-		Locale.setDefault(Locale.US);
-		Scanner scanner = new Scanner(System.in);
-		
+		// Locale.setDefault(Locale.US);
+		Datas data = new Datas();
 
+		data.mostrarDatas();
 
-		scanner.close();
-		
 	}
-	
+
 }
-/* Exercício com Matrizes
+/*
+ * Exercício com Matrizes
  * 
- * 		int n = scanner.nextInt();
-		int m = scanner.nextInt();
-		int[][] matriz = new int[n][m];
-
-		for(int i = 0; i < matriz.length; i++){
-			for(int j = 0; j < matriz[i].length; j++){
-				matriz[i][j] = scanner.nextInt();
-			}
-		}
-
-		int valorASerPesquisado = scanner.nextInt();
-
-		for(int i = 0; i < matriz.length; i++){
-			for(int j = 0; j < matriz[i].length; j++){
-				if(matriz[i][j] == valorASerPesquisado){
-					System.out.println("Position " + i + "," + j);
-					if(j > 0){
-						System.out.println("Left: " + matriz[i][j-1]);
-					}
-					if(j < matriz[i].length - 1){
-						System.out.println("Right: " + matriz[i][j + 1]);
-					}
-					if(i > 0){
-						System.out.println("Up: " + matriz[i-1][j]);
-					}
-					if(i < matriz.length - 1) {
-						System.out.println("Down: " + matriz[i + 1][j] + "\n");
-					}
-				}
-				
-			}
-		}
+ * int n = scanner.nextInt();
+ * int m = scanner.nextInt();
+ * int[][] matriz = new int[n][m];
+ * 
+ * for(int i = 0; i < matriz.length; i++){
+ * for(int j = 0; j < matriz[i].length; j++){
+ * matriz[i][j] = scanner.nextInt();
+ * }
+ * }
+ * 
+ * int valorASerPesquisado = scanner.nextInt();
+ * 
+ * for(int i = 0; i < matriz.length; i++){
+ * for(int j = 0; j < matriz[i].length; j++){
+ * if(matriz[i][j] == valorASerPesquisado){
+ * System.out.println("Position " + i + "," + j);
+ * if(j > 0){
+ * System.out.println("Left: " + matriz[i][j-1]);
+ * }
+ * if(j < matriz[i].length - 1){
+ * System.out.println("Right: " + matriz[i][j + 1]);
+ * }
+ * if(i > 0){
+ * System.out.println("Up: " + matriz[i-1][j]);
+ * }
+ * if(i < matriz.length - 1) {
+ * System.out.println("Down: " + matriz[i + 1][j] + "\n");
+ * }
+ * }
+ * 
+ * }
+ * }
  */
 
-
-/* Estudo com Matrizes - 
-
+/*
+ * Estudo com Matrizes -
+ * 
  * int[][] matriz = new int[n][n];
-
-		for(int i = 0; i < matriz.length; i++){
-			for(int j = 0; j < matriz[i].length; j++){
-				matriz[i][j] = scanner.nextInt();
-			}
-		}
-		System.out.println("Main Diagonal:");
-		for(int i = 0; i < matriz.length; i++){
-			for(int j = 0; j < matriz[i].length; j++){
-				if(i == j)
-				System.out.print(matriz[i][j] + " ");
-			}
-		}
-		System.out.println();
-		System.out.print("Quantity of negative numbers = ");
-		int count = 0;
-		for(int i = 0; i < matriz.length; i++){
-			for(int j = 0; j < matriz[i].length; j++){
-				if(matriz[i][j] < 0)
-				count++;
-			}
-		}
-		System.out.print(count);
-
-
+ * 
+ * for(int i = 0; i < matriz.length; i++){
+ * for(int j = 0; j < matriz[i].length; j++){
+ * matriz[i][j] = scanner.nextInt();
+ * }
+ * }
+ * System.out.println("Main Diagonal:");
+ * for(int i = 0; i < matriz.length; i++){
+ * for(int j = 0; j < matriz[i].length; j++){
+ * if(i == j)
+ * System.out.print(matriz[i][j] + " ");
+ * }
+ * }
+ * System.out.println();
+ * System.out.print("Quantity of negative numbers = ");
+ * int count = 0;
+ * for(int i = 0; i < matriz.length; i++){
+ * for(int j = 0; j < matriz[i].length; j++){
+ * if(matriz[i][j] < 0)
+ * count++;
+ * }
+ * }
+ * System.out.print(count);
+ * 
+ * 
  */
-
 
 /*
  * Estudo sobre listas
  * 
- * 		List<EmployeeManagement> empregados = new ArrayList<>();
-
-		System.out.print("How many employees will be registered? ");
-		int quantity = scanner.nextInt();
-		System.out.println();
-
-		int i = 0;
-		while(i < quantity) {
-			System.out.printf("Employee #%d \n", i + 1);
-			System.out.print("Id: ");
-			String id = scanner.next();
-			System.out.print("Name: ");
-			scanner.nextLine();
-			String name = scanner.nextLine();
-			System.out.print("Salary: ");
-			double salary = scanner.nextDouble();
-
-			empregados.add(new EmployeeManagement(id, name, salary));
-			System.out.println();
-			i++;
-		}
-
-		System.out.print("Enter the employee ID to increase salary: ");
-		String idEmployee = scanner.next();
-		EmployeeManagement employeeFound = empregados.stream().filter(x -> x.getId().equals(idEmployee)).findFirst().orElse(null);
-		if(employeeFound == null){
-			System.out.println("This id does not exist!");
-		}
-		else{
-			empregados.remove(employeeFound);
-			System.out.print("Enter the percentage: ");
-			double percentage = scanner.nextDouble();
-			employeeFound.increaseSalary(percentage);
-			// double increasedSalary = employeeFound.increaseSalary(percentage);
-			// employeeFound.setSalary(increasedSalary);
-			empregados.add(employeeFound);
-		}
-		
-		System.out.println("List of employess:");
-		empregados.stream().forEach(e -> System.out.println(e));
+ * List<EmployeeManagement> empregados = new ArrayList<>();
+ * 
+ * System.out.print("How many employees will be registered? ");
+ * int quantity = scanner.nextInt();
+ * System.out.println();
+ * 
+ * int i = 0;
+ * while(i < quantity) {
+ * System.out.printf("Employee #%d \n", i + 1);
+ * System.out.print("Id: ");
+ * String id = scanner.next();
+ * System.out.print("Name: ");
+ * scanner.nextLine();
+ * String name = scanner.nextLine();
+ * System.out.print("Salary: ");
+ * double salary = scanner.nextDouble();
+ * 
+ * empregados.add(new EmployeeManagement(id, name, salary));
+ * System.out.println();
+ * i++;
+ * }
+ * 
+ * System.out.print("Enter the employee ID to increase salary: ");
+ * String idEmployee = scanner.next();
+ * EmployeeManagement employeeFound = empregados.stream().filter(x ->
+ * x.getId().equals(idEmployee)).findFirst().orElse(null);
+ * if(employeeFound == null){
+ * System.out.println("This id does not exist!");
+ * }
+ * else{
+ * empregados.remove(employeeFound);
+ * System.out.print("Enter the percentage: ");
+ * double percentage = scanner.nextDouble();
+ * employeeFound.increaseSalary(percentage);
+ * // double increasedSalary = employeeFound.increaseSalary(percentage);
+ * // employeeFound.setSalary(increasedSalary);
+ * empregados.add(employeeFound);
+ * }
+ * 
+ * System.out.println("List of employess:");
+ * empregados.stream().forEach(e -> System.out.println(e));
  */
 
 // Implementação do método Capitalize
